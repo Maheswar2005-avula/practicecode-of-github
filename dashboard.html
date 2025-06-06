@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+    <div class="container">
+        <h1>📊 Dashboard</h1>
+        <p>Welcome to your dashboard!</p>
+
+        <div class="dashboard-buttons">
+            <button onclick="goToTodo()">📝 Go to To-Do List</button>
+            <button onclick="logout()">🚪 Logout</button>
+        </div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const isLoggedIn = localStorage.getItem("loggedIn");
+            if (isLoggedIn !== "true") {
+                window.location.href = "index.html";
+            }
+        }
+
+        function goToTodo() {
+            window.location.href = "todo.html";
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
