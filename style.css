@@ -50,6 +50,10 @@ button:hover {
     list-style: none;
     padding: 0;
 }
+#task-list1 {
+    list-style: none;
+    padding: 0;
+}
 
 li {
     padding: 10px;
